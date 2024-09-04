@@ -7,6 +7,25 @@ navbar.forEach(function(a){
     })
 })
 
+let preloader = document.querySelector("#preloader");
+
+function preloading(){
+    preloader.style.opacity = 0;
+    preloader.style.display = 'none';
+}
+
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    navLinks.forEach((otherLink) => {
+      otherLink.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  });
+});
+
 
 
 // !     countDown timer js
@@ -15,7 +34,7 @@ var hour = document.querySelector("#hours");
 var min = document.querySelector("#min");
 var sec = document.querySelector("#sec");
 
-    var nextdate = new Date("July 20, 2024 00:00:00").getTime();
+    var nextdate = new Date("July 20, 2025 00:00:00").getTime();
     
     var countdown = setInterval(() => {
         var currentdate = new Date().getTime();

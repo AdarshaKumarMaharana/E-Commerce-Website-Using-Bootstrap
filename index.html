@@ -13,8 +13,17 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="./responsive.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar">
-
+<body data-bs-spy="scroll" data-bs-target=".navbar" onload="preloading()">
+  <div id="preloader">
+    <div class="container">
+      <span class="loaders" style="--i:1;--j:4"></span>
+      <span class="loaders" style="--i:2;--j:4"></span>
+      <span class="loaders" style="--i:3;--j:4"></span>
+      <span class="loaders" style="--i:4;--j:4"></span>
+      <span class="loaders" style="--i:5;--j:4"></span>
+      <span class="loaders" style="--i:6;--j:4"></span>
+    </div>
+  </div>
     <!-- Navigation Section -->
      <section id="header">
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
@@ -392,7 +401,6 @@
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
